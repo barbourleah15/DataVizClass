@@ -1,2 +1,0 @@
-# DataVizClass
-Data Viz Class
