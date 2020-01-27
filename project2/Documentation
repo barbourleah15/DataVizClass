@@ -1,0 +1,7 @@
+The two sources that the data was pulled from are:
+https://fred.stlouisfed.org/series/S4248SM144NCEN
+https://www.ncdc.noaa.gov/cag/national/time-series/110/tavg/1/12/2000-2018?base_prd=true&begbaseyear=1901&endbaseyear=2000
+
+From the two data sources above, the files were downloaded as csv files. 
+
+Several steps were taken to clean the data before loading into postgresql, an object-relational database. The columns were renamed and superflous columns, such as the anomoly column in the weather csv, were dropped. These were then loaded into pgAdmin.  Once in sql they tables were then joined into a new table based on the date (month). This dropped 97 rows from the alcohol sales csv (drinking table). The data could be further cleaned, if desired, as demonstrated in the final two columns of the jupyter notebook.  
