@@ -40,7 +40,7 @@ function createMap(circleMarkers)
   };
 
   // Create the map object with options
-  let myMap = L.map("map", {
+  let myMap = L.map("map-id", {
     center: [37.09, -95.71],
     zoom: 5,
     layers: [streetmap, circleMarkers]
