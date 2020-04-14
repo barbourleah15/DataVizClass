@@ -4,9 +4,9 @@ let jQ = jQuery;
 
 // YOUR CODE HERE!
 
-let UFO = i => {
+let UFOtable = i => {
 	let row;
-	jQ('#ufoTable tbody').empty();
+	jQ('#UFO tbody').empty();
 	i.forEach(d => {
 		row = `
 			<tr>
@@ -19,19 +19,15 @@ let UFO = i => {
 				<td>${d.comments}</td>
 			</tr>
 		`;
-		jQ('#ufoTable tbody').append(row);
+		jQ('#UFO tbody').append(row);
 	})
 };
 
 
-UFO(tableData);
+UFOtable(tableData);
 
-jQ('#filter-btn').click(() => {
-	let searchDate =  jQ('#datetime').val();
-	let searchResults = tableData.filter(d => d.datetime === searchDate);
-	UFO(searchResults);
-});
-
-jQ('#reset-btn').click(() => {
-	UFO(tableData);
+jQ('#button').click(() => {
+	let Date =  $('#datetime').val();
+	let Results = tableData.filter(d => d.datetime === Date);
+	UFOtable(Results);
 });
